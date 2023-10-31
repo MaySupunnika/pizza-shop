@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "./globals.css";
+import Provider from "./components/Provider";
 
 export const metadata = {
   title: "PIZZA-SHOP",
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="../app/pizza.ico" />
       </Head>
       <html lang="en">
-        <body>{children}</body>
+        <Provider>
+          <body>{children}</body>
+        </Provider>
       </html>
     </>
   );

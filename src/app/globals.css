@@ -9,4 +9,5 @@
   box-sizing: border-box;
   color: black;
   font-family: "Montserrat";
+  /* overflow-x: hidden; */
 }
