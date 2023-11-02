@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import PromotionMeal from "./components/PromotionMeal";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className='bg-[url("https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/pizza-home.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvcGl6emEtaG9tZS5qcGciLCJpYXQiOjE2OTg3NDk0MzMsImV4cCI6MTczMDI4NTQzM30.mII-gGXcsT9OoZAKLOUybv8lCd6ZBEF0_ofEyALdZp8&t=2023-10-31T10%3A50%3A34.200Z")] w-screen  h-[850px] bg-cover pt-[17rem]'>
+      <div className='bg-[url("https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/pizza-home.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvcGl6emEtaG9tZS5qcGciLCJpYXQiOjE2OTg3NDk0MzMsImV4cCI6MTczMDI4NTQzM30.mII-gGXcsT9OoZAKLOUybv8lCd6ZBEF0_ofEyALdZp8&t=2023-10-31T10%3A50%3A34.200Z")] h-[850px] bg-cover pt-[17rem]'>
         <div className="flex flex-col pl-5 gap-5 mb-[9rem]">
           <div className="flex items-center">
             <p className="font-semibold text-xl">HAPPY HOUR SPECIAL</p>
@@ -25,6 +26,7 @@ export default function Home() {
           </button>
         </div>
         <PromotionMeal />
+        <Footer />
       </div>
     </>
   );

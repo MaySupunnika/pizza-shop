@@ -36,13 +36,13 @@ export default function PromotionMeal() {
     <>
       <div className="h-[36rem] flex justify-center">
         <div className="flex gap-8">
-          <div className="flex justify-center w-[518px] h-[540px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTEucG5nIiwiaWF0IjoxNjk4NzY3MDEwLCJleHAiOjE3MzAzMDMwMTB9.LGIjb4Zg3nFWDINDKLyJSfia8SVaMzm8DBqKOtVngKE&t=2023-10-31T15%3A43%3A30.756Z')] hover:scale-105 duration-150">
+          <div className="flex justify-center w-[518px] h-[540px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-1.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTEucG5nIiwiaWF0IjoxNjk4NzY3MDEwLCJleHAiOjE3MzAzMDMwMTB9.LGIjb4Zg3nFWDINDKLyJSfia8SVaMzm8DBqKOtVngKE&t=2023-10-31T15%3A43%3A30.756Z')] hover:scale-105 duration-200">
             <button className="mt-[13.5rem] bg-Red-100 px-4 py-3 rounded-lg h-[3rem] w-[8rem] text-white font-semibold text-sm hover:bg-white hover:border-Red-100 hover:border-[1px] hover:text-Red-100">
               Order Now
             </button>
           </div>
           <div className="flex flex-col gap-8">
-            <div className="pl-6 w-[410px] h-[254px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTIuanBnIiwiaWF0IjoxNjk4NzY3MjExLCJleHAiOjE3MzAzMDMyMTF9.xZaHO8-sh1HfoNF_IZp-1eAAmwDIS_FbsAXsR8l8SqE&t=2023-10-31T15%3A46%3A52.376Z')] hover:scale-105 duration-150">
+            <div className="pl-6 w-[410px] h-[254px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTIuanBnIiwiaWF0IjoxNjk4NzY3MjExLCJleHAiOjE3MzAzMDMyMTF9.xZaHO8-sh1HfoNF_IZp-1eAAmwDIS_FbsAXsR8l8SqE&t=2023-10-31T15%3A46%3A52.376Z')] hover:scale-105 duration-200">
               <h3 className="text-Red-100 font-semibold text-4xl mt-8 mb-4">
                 Special <span className="text-white">Combo</span>
               </h3>
@@ -55,7 +55,7 @@ export default function PromotionMeal() {
                 Order Now
               </button>
             </div>
-            <div className="pl-6 w-[410px] h-[254px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTMuanBnIiwiaWF0IjoxNjk4NzY3MDkzLCJleHAiOjE3MzAzMDMwOTN9.7g6et-Ng9DR7Aw6_nbElo3qNmPSjCGsJsOAWEQ6Xc_k&t=2023-10-31T15%3A44%3A53.710Z')] hover:scale-105 duration-150">
+            <div className="pl-6 w-[410px] h-[254px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTMuanBnIiwiaWF0IjoxNjk4NzY3MDkzLCJleHAiOjE3MzAzMDMwOTN9.7g6et-Ng9DR7Aw6_nbElo3qNmPSjCGsJsOAWEQ6Xc_k&t=2023-10-31T15%3A44%3A53.710Z')] hover:scale-105 duration-200">
               <h3 className="text-white font-semibold text-4xl mt-8 mb-4">
                 New <span className="text-Red-100">Recipe</span>
               </h3>
@@ -68,7 +68,7 @@ export default function PromotionMeal() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col items-center w-[301px] h-[539px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-4.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTQucG5nIiwiaWF0IjoxNjk4NzY3NjQ5LCJleHAiOjE3MzAzMDM2NDl9.9xwSH1a_twCmw4ACnxn4aszwVb0aNW4HCHwsbCo4Ptw&t=2023-10-31T15%3A54%3A10.298Z')] hover:scale-105 duration-150">
+          <div className="flex flex-col items-center w-[301px] h-[539px] rounded-xl bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/burger-4.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYnVyZ2VyLTQucG5nIiwiaWF0IjoxNjk4NzY3NjQ5LCJleHAiOjE3MzAzMDM2NDl9.9xwSH1a_twCmw4ACnxn4aszwVb0aNW4HCHwsbCo4Ptw&t=2023-10-31T15%3A54%3A10.298Z')] hover:scale-105 duration-200">
             <p className="text-white text-xl mt-[10rem] mb-5 text-center">
               This campaign applies to
               <br />
@@ -92,9 +92,6 @@ export default function PromotionMeal() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="flex justify-center h-5">
-        <hr className="w-[90%] text-Gray-100 opacity-50" />
       </div>
     </>
   );

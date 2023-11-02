@@ -20,4 +20,73 @@ model Users {
   role       String    @default("user")
   created_at DateTime  @default(now())
   updated_at DateTime  @updatedAt
+  Order      Order[]
+}
+
+model Boxset {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Int
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  Order       Order[]
+}
+
+model Pizza {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String
+  price       String
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
+  PizzaSize   PizzaSize[]
+  Order       Order[]
+}
+
+model PizzaSize {
+  id      Int     @id @default(autoincrement())
+  size    String
+  price   Int
+  Pizza   Pizza   @relation(fields: [pizzaId], references: [id], onDelete: Cascade)
+  pizzaId Int
+  Order   Order[]
+}
+
+model Hamburger {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  Order       Order[]
+}
+
+model Drink {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  Order       Order[]
+}
+
+model Order {
+  id          Int        @id @default(autoincrement())
+  status      String     @default("now")
+  created_at  DateTime   @default(now())
+  Users       Users?     @relation(fields: [usersId], references: [id])
+  usersId     Int?
+  Boxset      Boxset?    @relation(fields: [boxsetId], references: [id])
+  boxsetId    Int?
+  Pizza       Pizza?     @relation(fields: [pizzaId], references: [id])
+  pizzaId     Int?
+  PizzaSize   PizzaSize? @relation(fields: [pizzaSizeId], references: [id])
+  pizzaSizeId Int?
+  Hamburger   Hamburger? @relation(fields: [hamburgerId], references: [id])
+  hamburgerId Int?
+  Drink       Drink?     @relation(fields: [drinkId], references: [id])
+  drinkId     Int?
 }

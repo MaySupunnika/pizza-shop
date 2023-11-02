@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         custom: ["Damion"],
       },
+      backgroundColor: {
+        second: "rgba(0, 0, 0, 0.6)",
+      },
     },
 
     colors: {
