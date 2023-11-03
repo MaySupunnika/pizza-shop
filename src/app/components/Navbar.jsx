@@ -35,7 +35,7 @@ export default function Navbar() {
   const handlerLogout = () => {
     signOut({
       redirect: true,
-      callbackUrl: `${window.location.origin}/login`,
+      callbackUrl: `${window.location.origin}/`,
     });
   };
 
@@ -55,6 +55,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   if (loading) {
     return <Loading />;
   }

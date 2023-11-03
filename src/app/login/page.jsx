@@ -1,15 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/navigation";
 import { getSession, signIn } from "next-auth/react";
+import Loading from "../components/Loading";
 
 export default function page() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
   const handlerSubmit = async (values) => {
     try {
+      setLoading(true);
       const response = await signIn("credentials", {
         email: values.email,
         password: values.password,
@@ -40,6 +44,10 @@ export default function page() {
     email: Yup.string().email("Email invalid").required("Email is Required"),
     password: Yup.string().required("Password is Required"),
   });
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
       <div className="bg-[url('https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/pizza-home.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvcGl6emEtaG9tZS5qcGciLCJpYXQiOjE2OTg3NDk0MzMsImV4cCI6MTczMDI4NTQzM30.mII-gGXcsT9OoZAKLOUybv8lCd6ZBEF0_ofEyALdZp8&t=2023-10-31T10%3A50%3A34.200Z')] bg-cover w-screen h-screen">
