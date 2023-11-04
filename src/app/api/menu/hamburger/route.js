@@ -21,3 +21,12 @@ export async function POST(req) {
     return NextResponse.error();
   }
 }
+
+export async function GET() {
+  try {
+    const hamburgerData = await prisma.hamburger.findMany();
+    return NextResponse.json(hamburgerData);
+  } catch (error) {
+    console.log("Error to GET hamburger", error);
+  }
+}
