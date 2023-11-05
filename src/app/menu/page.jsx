@@ -10,6 +10,8 @@ export default function page() {
   const [hamburgerData, setHamburgerData] = useState([]);
   const [drinkData, setDrinkData] = useState([]);
 
+  const [cartItem, setCartItem] = useState([]);
+
   const fetchMenuData = async () => {
     try {
       const boxsetResponse = await axios.get("/api/menu/boxset");
@@ -26,6 +28,25 @@ export default function page() {
       // console.log(drinkResponse);
     } catch (error) {
       console.log("Error getting boxset data", error);
+    }
+  };
+
+  const addToCart = (item) => {
+    // ตรวจสอบว่ารายการสินค้าอยู่ในตะกร้าหรือไม่
+    const existingItem = cartItem.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      setCartItem(
+        cartItem.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        )
+      );
+      console.log(cartItem);
+    } else {
+      // หากรายการสินค้ายังไม่อยู่ในตะกร้า ให้เพิ่มในตะกร้า
+      setCartItem([...cartItem, { ...item, quantity: 1 }]);
     }
   };
 
@@ -65,6 +86,7 @@ export default function page() {
                       {item.price} ฿
                     </p>
                     <img
+                      onClick={() => addToCart(item)}
                       src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/add-to-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYWRkLXRvLWNhcnQucG5nIiwiaWF0IjoxNjk5MTA1MDIxLCJleHAiOjE3MzA2NDEwMjF9.aZiHuOABaMUaRATCI6LPTlxqM_9Jk2z2TMR0etCpilY&t=2023-11-04T13%3A37%3A01.634Z"
                       className="w-[2rem] h-[2rem] cursor-pointer"
                     />
@@ -96,6 +118,7 @@ export default function page() {
                       {item.price} ฿
                     </p>
                     <img
+                      onClick={() => addToCart(item)}
                       src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/add-to-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYWRkLXRvLWNhcnQucG5nIiwiaWF0IjoxNjk5MTA1MDIxLCJleHAiOjE3MzA2NDEwMjF9.aZiHuOABaMUaRATCI6LPTlxqM_9Jk2z2TMR0etCpilY&t=2023-11-04T13%3A37%3A01.634Z"
                       className="w-[2rem] h-[2rem] cursor-pointer"
                     />
@@ -127,6 +150,7 @@ export default function page() {
                       {item.price} ฿
                     </p>
                     <img
+                      onClick={() => addToCart(item)}
                       src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/add-to-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYWRkLXRvLWNhcnQucG5nIiwiaWF0IjoxNjk5MTA1MDIxLCJleHAiOjE3MzA2NDEwMjF9.aZiHuOABaMUaRATCI6LPTlxqM_9Jk2z2TMR0etCpilY&t=2023-11-04T13%3A37%3A01.634Z"
                       className="w-[2rem] h-[2rem] cursor-pointer"
                     />
@@ -158,6 +182,7 @@ export default function page() {
                       {item.price} ฿
                     </p>
                     <img
+                      onClick={() => addToCart(item)}
                       src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/add-to-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvYWRkLXRvLWNhcnQucG5nIiwiaWF0IjoxNjk5MTA1MDIxLCJleHAiOjE3MzA2NDEwMjF9.aZiHuOABaMUaRATCI6LPTlxqM_9Jk2z2TMR0etCpilY&t=2023-11-04T13%3A37%3A01.634Z"
                       className="w-[2rem] h-[2rem] cursor-pointer"
                     />

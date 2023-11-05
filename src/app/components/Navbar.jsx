@@ -32,6 +32,11 @@ export default function Navbar() {
     setToggle(!toggle);
   };
 
+  const clickCart = () => {
+    setLoading(true);
+    router.push("/cart");
+  };
+
   const handlerLogout = () => {
     signOut({
       redirect: true,
@@ -138,10 +143,12 @@ export default function Navbar() {
             )}
             <div className="h-[100%] relative">
               <img
+                onClick={clickCart}
                 className="w-8 h-8 cursor-pointer"
                 src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/shopping-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvc2hvcHBpbmctY2FydC5wbmciLCJpYXQiOjE2OTg3NjI1NzUsImV4cCI6MTczMDI5ODU3NX0.4RYwFu26BZs3sqkz3mb6dJrU52nEhTVmiV1waYXI7-w&t=2023-10-31T14%3A29%3A35.753Z"
               />
               <img
+                onClick={clickCart}
                 className="cursor-pointer w-8 h-8 absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-100"
                 src="https://pisulwuqrrzwvivwrwva.supabase.co/storage/v1/object/sign/dev-storage/images/shopping-cart-red.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkZXYtc3RvcmFnZS9pbWFnZXMvc2hvcHBpbmctY2FydC1yZWQucG5nIiwiaWF0IjoxNjk4NzYzNDY2LCJleHAiOjE3MzAyOTk0NjZ9.UnyCyI51Pvj5WDUzadHMpe4JN_AALWkBML53yiZQaQY&t=2023-10-31T14%3A44%3A26.658Z"
               />
