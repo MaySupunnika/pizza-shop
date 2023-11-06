@@ -36,6 +36,15 @@ export default function page() {
     }
   };
 
+  const clickClose = () => {
+    setLoading(true);
+    router.push("/");
+  };
+
+  const clickRegister = () => {
+    setLoading(true);
+    router.push("/register");
+  };
   const initialValues = {
     email: "",
     password: "",
@@ -54,6 +63,12 @@ export default function page() {
         <div className="relative w-[100%] h-[100%] bg-second">
           <div className="flex justify-center items-center w-[100%] h-[100%]">
             <div className="w-[32rem] h-[27rem] bg-white">
+              <div
+                onClick={clickClose}
+                className="w-[2rem] h-[2rem] bg-Red-100 text-white text-center font-semibold relative z-10 left-[28rem] cursor-pointer"
+              >
+                X
+              </div>
               <h2 className="text-Red-100 font-bold text-3xl text-center mt-3">
                 PIZZA-SHOP
               </h2>
@@ -139,7 +154,10 @@ export default function page() {
               </Formik>
               <p className="ml-12 mt-[1rem]">
                 Have an account?
-                <span className="text-Red-100 cursor-pointer hover:font-semibold">
+                <span
+                  onClick={clickRegister}
+                  className="text-Red-100 cursor-pointer hover:font-semibold"
+                >
                   Register
                 </span>
               </p>

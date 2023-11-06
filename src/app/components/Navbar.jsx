@@ -114,7 +114,10 @@ export default function Navbar() {
                         <p className="py-2 px-6 border-b border-Red-100 font-medium hover:text-Red-100 cursor-pointer">
                           History
                         </p>
-                        <p className="py-2 px-6 border-b border-Red-100 font-medium hover:text-Red-100 cursor-pointer">
+                        <p
+                          onClick={clickCart}
+                          className="py-2 px-6 border-b border-Red-100 font-medium hover:text-Red-100 cursor-pointer"
+                        >
                           Order
                         </p>
                         <p className="py-2 px-6 border-b border-Red-100 font-medium hover:text-Red-100 cursor-pointer">
